@@ -58,8 +58,8 @@
     "pull": "git pull",
     "release": "semantic-release",
     "self-hosting:docker": "docker build -t lobe-chat:local .",
-    "self-hosting:docker-cn": "docker build -t lobe-chat-local --build-arg USE_CN_MIRROR=true .",
-    "self-hosting:docker-cn@database": "docker build -t lobe-chat-database-local -f Dockerfile.database --build-arg USE_CN_MIRROR=true .",
+    "self-hosting:docker-cn": "docker build -t lobe-chat-local --build-arg USE_CN_MIRROR=false .",
+    "self-hosting:docker-cn@database": "docker build -t lobe-chat-database-local -f Dockerfile.database --build-arg USE_CN_MIRROR=false .",
     "start": "next start -p 3210",
     "stylelint": "stylelint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
     "test": "npm run test-app && npm run test-server",
@@ -156,6 +156,7 @@
     "antd": "^5.23.0",
     "antd-style": "^3.7.1",
     "brotli-wasm": "^3.0.1",
+    "bun": "^1.2.5",
     "chroma-js": "^3.1.2",
     "countries-and-timezones": "^3.7.2",
     "dayjs": "^1.11.13",
@@ -330,7 +331,7 @@
     "vitest": "~1.2.2",
     "vitest-canvas-mock": "^0.3.3"
   },
-  "packageManager": "pnpm@9.15.7",
+  "packageManager": "pnpm@10.6.3",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
